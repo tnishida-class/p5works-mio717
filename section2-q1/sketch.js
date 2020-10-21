@@ -1,16 +1,16 @@
 // 小手調べ
 function setup(){
+  createCanvas(200,200);
   noFill();
-  let x = 50;
+  let x = 100;
   for(let i = 0; i < 10; i++){
-    ellipse(x,x,(i+1)*10);
-    if(i < 4){
-      stroke(255,0,0);
-    }
-    else{
+    if(i < 5){
       stroke(0,0,255);
     }
-
+    else{
+      stroke(255,0,0);
+    }
+    ellipse(x,x,(i+1)*10);
   }
     // BLANK[1]
 }
