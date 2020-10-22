@@ -12,11 +12,11 @@ function setup() {
           rect(size*i,size*j,size,size);
           if(j < 3){
             fill(255,0,0);
-            ellipse(size*(i+(1/2)),size*(j+(1/2)),size);
+            ellipse(size*(i+(1/2)),size*(j+(1/2)),size-4);
           }
           else if(j > 4){
             fill(0,0,0);
-            ellipse(size*(i+(1/2)),size*(j+(1/2)),size);
+            ellipse(size*(i+(1/2)),size*(j+(1/2)),size-4);
           }
         }
       }
