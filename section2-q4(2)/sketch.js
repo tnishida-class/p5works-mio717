@@ -21,11 +21,28 @@ function setup() {
   let p = width * 76 / 190
   rect(0, 0, p, d * 7);
 
-  let size = p / 11;
+  let q = p / 12;
+  let r = d * 7 / 10;
 
   for(let j = 0; j < 11; j++){
     for(let k = 0; k < 9; k++){
-
+      for(let l = -4; l < 6; l++){
+        if(j == k + 2 * l){
+          fill(255);
+          star(q * (j + 1), r * (k + 1), r - 6);
         }
       }
+    }
+  }
+
+  function star(cx,cy,r){
+    beginShape();
+    for(let i = 0; i < 5; i++){
+      const theta = TWO_PI * i * 2 / 5 - HALF_PI;
+      const x = cx + cos(theta) * r;
+      const y = cy + sin(theta) * r;
+      vertex(x, y);
+    }
+    endShape(CLOSE);
+  }
 }
