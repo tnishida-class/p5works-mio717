@@ -6,9 +6,16 @@ function setup() {
   noStroke();
   background(blue);
 
-  let x = width / 4
+  let m = width / 61;
+  let n = height / 8;
 
-  star(x - 7, 20, 15);
+  for(let i = 0; i < 9; i++){
+    for(let j = 0; j < 10; j++){
+      if(i == j - 1){
+        star(4 * m * i + 55, n * j - 20, m + 8);
+      }
+    }
+  }
 
   function star(cx, cy, r){
     fill(255);
@@ -22,6 +29,7 @@ function setup() {
     endShape(CLOSE);
   }
   fill(yellow);
-  triangle(x, 0, 3 * x, 0, 3 * x, height);
+  let k = 80;
+  triangle(k, 0, 3 * k, 0, 3 * k, height);
 
 }
