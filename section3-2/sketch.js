@@ -6,7 +6,8 @@ function setup(){
   fill(0);
   crossmark(10, 10, 90, 90);
   ngmark(150, 50, 80);
-  star(250, 50, 40);
+  //star(250, 50, 40);
+  regularPolygon(9, 250, 50, 40);
 }
 
 function crossmark(x1, y1, x2, y2){
@@ -33,4 +34,15 @@ function star(cx, cy, r){
     vertex(x,y);
   }
   endShape(CLOSE);
+}
+
+function regularPolygon(n, cx, cy, r){
+  beginShape();    // 点つなぎを始める
+  for(let i = 0; i < n; i++){
+    const theta = TWO_PI * i  / n - HALF_PI;
+    const x = cx + cos(theta) * r;
+    const y = cy + sin(theta) * r;
+    vertex(x, y);  // 次につなぐ点を１つ増やす
+  }
+  endShape(CLOSE); // 点つなぎを終わる
 }

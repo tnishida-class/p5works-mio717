@@ -2,7 +2,7 @@
 function setup(){
   createCanvas(200, 200);
   calendar(2019, 10);
-
+    
   for(let i = 2000; i <= 2100; i++){
     if(isLeapYear(i)){
       console.log(i + "年はうるう年です");
@@ -11,6 +11,7 @@ function setup(){
       console.log(i + "年はうるう年ではありません");
     }
   }
+
 }
 
 function calendar(y, m){
