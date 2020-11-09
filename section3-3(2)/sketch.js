@@ -1,3 +1,4 @@
+
 //西暦y年m月d日が何曜日か
 function setup(){
    dayOfWeek(2001,1,13)//好きな年月日を入力してください
@@ -6,6 +7,7 @@ function setup(){
 function isLeapYear(y){
         return(y % 4 == 0) && (y % 100 != 0) ||(y % 400 == 0);
 }
+
 
 function dayOfYear(y,m,d){
   let count = 0;
