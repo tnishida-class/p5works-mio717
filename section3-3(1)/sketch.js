@@ -1,3 +1,4 @@
+
 //西暦y年が何日あるか
 function setup(){
   for(let i = 2000; i <= 2100; i++){
@@ -11,5 +12,5 @@ function setup(){
 }
 
 function isLeapYear(y){
-        return(y % 4 == 0) && (y % 100 != 0) ||(y % 400 == 0);
+  return(y % 4 == 0) && (y % 100 != 0) ||(y % 400 == 0);
 }
