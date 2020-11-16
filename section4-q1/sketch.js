@@ -20,4 +20,6 @@ function draw(){
     size = 100 - count;
   }
   ellipse(width / 2, height / 2, size * 5);
+  //キーを押していると鼓動が早くなって離すとゆっくりになる円
+  if(keyIsPressed){count += 1;}
 }
