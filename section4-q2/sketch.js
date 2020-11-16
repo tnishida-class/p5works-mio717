@@ -41,6 +41,11 @@ function star(cx, cy, r, angle){
   endShape(CLOSE);
 }
 
+function mouseClicked(){
+  x = mouseX;
+  y = mouseY;
+}
+
 function windowResized(){
   resizeCanvas(windowWidth, windowHeight);
 }
