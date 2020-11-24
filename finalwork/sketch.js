@@ -66,6 +66,9 @@ function draw(){
   fill(255);
   textSize(32);
   text('Goal', 15, 40);
+  fill(0,0,0);
+  textSize(15);
+  text('スペースキーでリセット', 15, windowWidth * 4 / 5);
 }
 
 function keyPressed(){
